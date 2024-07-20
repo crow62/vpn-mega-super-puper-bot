@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mongo_db
-    image: crow62dy/vpn-bot:v1
+    image: crow62dy/vpn-bot:v3
     restart: on-failure
     env_file: ./.env
     ports:

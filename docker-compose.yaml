@@ -20,6 +20,7 @@ services:
     env_file: ./.env
     ports:
       - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
+      - $DEBUG_LOCAL_PORT:$DEBUG_DOCKER_PORT
     environment:
       SPRING_APPLICATION_JSON: '{
           "spring.data.mongodb.uri" : "mongodb://$MONGODB_USER:$MONGODB_PASSWORD@mongo_db:$MONGODB_DOCKER_PORT/$MONGODB_DATABASE?authSource=admin"

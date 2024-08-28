@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mongo_db
-    image: crow62dy/vpn-bot:v7
+    image: crow62dy/vpn-bot:v8
     restart: on-failure
     env_file: ./.env
     ports:
@@ -29,6 +29,7 @@ services:
       - .m2:/root/.m2
       - /root/wireguard/config/:/app/data
       - /root/wireguard/config/wg_confs:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
     stdin_open: true
     tty: true
 

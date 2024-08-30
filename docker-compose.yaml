@@ -28,7 +28,6 @@ services:
     volumes:
       - .m2:/root/.m2
       - /root/wireguard/config/:/app/data
-      - /root/wireguard/config/wg_confs:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
     stdin_open: true
     tty: true

@@ -1,1 +1,0 @@
-docker restart $(docker inspect --format='{{.Id}}' wireguard)
